@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law & Criminality</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: url('https://assets.everspringpartners.com/dims4/default/b86f6fb/2147483647/strip/true/crop/1230x646+370+0/resize/1200x630!/quality/90/?url=http%3A%2F%2Feverspring-brightspot.s3.us-east-1.amazonaws.com%2F6b%2F19%2F381453434f2faa5162059a38f66f%2Fpitt-intro-criminal-law.jpg') no-repeat center center/cover;
+            background-position: center 66%;
+            color: white;
+            padding: 5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            padding-left: 2rem;
+            position: relative;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 1;
+        }
+        header h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+        main {
+            padding: 2rem;
+        }
+        #lawSubtitle {
+            font-size: 3rem;
+            color: white;
+            margin: 0;
+            padding: 10rem 0;
+            position: relative;
+            background: url('https://stfrancislaw.com/wp-content/uploads/2018/12/iStock-899023642.jpg') no-repeat center center/cover;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #lawSubtitle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(2px);
+            z-index: 1;
+        }
+        #lawSubtitle span {
+            position: relative;
+            z-index: 2;
+        }
+
+        #purposeSubtitle {
+            font-size: 2.3rem;
+            color: white;
+            margin: 0;
+            padding: 3.28rem 0;
+            position: relative;
+            background-color: #D4AC0D;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #purposeSubtitle:hover {
+            background-color: #F1C40F;
+        }
+
+        #purposeSubtitle span {
+            position: absolute;
+            top: 3rem;
+            left: 10rem;
+            z-index: 2;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+
+        #revealedMessage {
+            font-size: 1.3rem;
+            color: white;
+            margin: 0;
+            padding: 3rem 0;
+            position: relative;
+            background-color: #D4AC0D;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 0.5s ease, max-height 0.5s ease;
+        }
+
+        button {
+            background-color: #345635;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #007BFF;
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Law & Criminality</h1>
+    </header>
+    <main>
+        <h2 id="lawSubtitle"><span>What is Law & Criminality?</span></h2>
+        <button id="greetButton">Find Out</button>
+        <p id="message" style="margin-top: 1rem; font-weight: bold;"></p>
+        <h2 id="purposeSubtitle"><span>What is OUR purpose?</span></h2>
+        <h2 id="revealedMessage">Our goal for this website is to provide you as much information as possible about the topic "Law and Criminality", what is Law and Criminality to us as a community and how it impacts the world we live in.</h2>
+        <div class="button-container">
+	<button id="surveyButton" style="font-size: 1.5rem;">Survey</button>
+	<button id="informationButton" style="font-size: 1.5rem;">Information</button>
+	<button id="interviewsButton" style="font-size: 1.5rem;">Interviews</button>
+	<button id="referenceButton" style="font-size: 1.5rem;">Reference</button>
+        </div>
+    </main>
+    <script>
+        const greetButton = document.getElementById('greetButton');
+        const message = document.getElementById('message');
+        const purposeSubtitle = document.getElementById('purposeSubtitle');
+        const revealedMessage = document.getElementById('revealedMessage');
+
+        greetButton.addEventListener('click', function() {
+            if (message.textContent === "") {
+                message.textContent = "The law of criminality is the body of law that defines conduct perceived as threatening to, harmful to, or otherwise endangering the property, health, safety, and welfare of people.";
+                greetButton.textContent = "Hide";
+            } else {
+                message.textContent = "";
+                greetButton.textContent = "Find Out";
+            }
+        });
+
+        greetButton.addEventListener('mouseover', function() {
+            if (message.textContent !== "") {
+                greetButton.textContent = "Hide";
+            }
+        });
+
+        greetButton.addEventListener('mouseout', function() {
+            if (message.textContent === "") {
+                greetButton.textContent = "Find Out";
+            }
+        });
+
+        purposeSubtitle.addEventListener('click', function() {
+            if (revealedMessage.style.opacity === "0") {
+                revealedMessage.style.opacity = "1";
+                revealedMessage.style.maxHeight = "100px"; // Adjust as needed
+            } else {
+                revealedMessage.style.opacity = "0";
+                revealedMessage.style.maxHeight = "0";
+            }
+        });
+
+        purposeSubtitle.addEventListener('mouseover', function() {
+            purposeSubtitle.querySelector('span').textContent = "CLICK ME";
+        });
+
+        purposeSubtitle.addEventListener('mouseout', function() {
+            purposeSubtitle.querySelector('span').textContent = "What is OUR purpose?";
+        });
+
+        // Redirecting buttons to dedicated pages
+        document.getElementById('surveyButton').addEventListener('click', function() {
+            window.location.href = 'survey.html';
+        });
+        document.getElementById('informationButton').addEventListener('click', function() {
+            window.location.href = 'information.html';
+        });
+        document.getElementById('interviewsButton').addEventListener('click', function() {
+            window.location.href = 'interviews.html';
+        });
+        document.getElementById('referenceButton').addEventListener('click', function() {
+            window.location.href = 'reference.html';
+        });
+    </script>
+</body>
+</html>

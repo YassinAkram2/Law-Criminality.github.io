@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information - Law & Criminality</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: url('https://assets.everspringpartners.com/dims4/default/b86f6fb/2147483647/strip/true/crop/1230x646+370+0/resize/1200x630!/quality/90/?url=http%3A%2F%2Feverspring-brightspot.s3.us-east-1.amazonaws.com%2F6b%2F19%2F381453434f2faa5162059a38f66f%2Fpitt-intro-criminal-law.jpg') no-repeat center center/cover;
+            background-position: center 66%;
+            color: white;
+            padding: 5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            padding-left: 2rem;
+            position: relative;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 1;
+        }
+        header h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+        main {
+            padding: 2rem;
+        }
+        .content {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: left;
+        }
+        .content h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        button {
+            background-color: #345635;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #007BFF;
+        }
+        .button-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Law & Criminality</h1>
+    </header>
+    <main>
+        <div class="content">
+            <h2>Welcome to the Information Section</h2>
+            <p>Here, you will find a collection of articles, data, and analyses focused on various aspects of law and criminality. Stay informed about legal frameworks and the impact of criminal activities on society.</p>
+            <p>Explore, learn, and deepen your understanding of these crucial topics.</p>
+        </div>
+        <div class="button-container">
+            <button id="surveyButton" style="font-size: 1.5rem;">Survey</button>
+            <button id="homeButton" style="font-size: 1.5rem;">Home</button>
+            <button id="interviewsButton" style="font-size: 1.5rem;">Interviews</button>
+            <button id="referenceButton" style="font-size: 1.5rem;">Reference</button>
+            
+        </div>
+    </main>
+    <script>
+        // Redirect buttons to respective pages
+        document.getElementById('surveyButton').addEventListener('click', function() {
+            window.location.href = 'survey.html';
+        });
+        document.getElementById('homeButton').addEventListener('click', function() {
+            window.location.href = 'home.html';
+        });
+        document.getElementById('interviewsButton').addEventListener('click', function() {
+            window.location.href = 'interviews.html';
+        });
+        document.getElementById('referenceButton').addEventListener('click', function() {
+            window.location.href = 'reference.html';
+        });
+    </script>
+</body>
+</html>
